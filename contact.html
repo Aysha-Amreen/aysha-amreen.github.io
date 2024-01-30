@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <title>Contact Aysha Amreen</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -13,7 +19,8 @@
         </a>
     </nav>
 
-    <h1>Contact Aysha Amreen</h1>
+    <section class="main">
+        <h1>Contact Aysha Amreen</h1>
     <a href="https://maps.app.goo.gl/YCddgCRWqhKo8LhJ9">
         <p>XXX Barrington Pkwy, Apt X<br>Athens, GA, 30605<br>United States</p>
     </a>
@@ -21,19 +28,25 @@
 
     <hr>
 
-    <form action="mailto:aa13809@uga.edu" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" cols="50"></textarea><br><br>
-
-        <input type="submit" value="Submit">
-    </form>
-
+    <div class="card">
+        <form action="mailto:aa13809@uga.edu" method="post">
+            <div class="one-col">
+                <h3>Email me!</h3>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" cols="50"></textarea><br><br>
+                
+                <input type="submit" value="Submit">            
+            </div>            
+        </form> 
+    </div>    
+    </section>
+    
     <footer>
         <p>&copy; <a href="index.html">Aysha Amreen</a></p>
     </footer>
