@@ -1,0 +1,42 @@
+.gear-container {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.gear-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative; 
+  z-index: 1;
+}
+
+.gear-icon {
+  width: 250px;
+  height: 250px;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+.gear-container h3 {
+  position: absolute; 
+  top: 30%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 3; 
+  font-size: 2.5rem;
+}
+
+.gear-icon:hover {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); 
+  }
+}
+

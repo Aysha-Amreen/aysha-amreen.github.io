@@ -1,0 +1,22 @@
+[
+    {
+      "id": "online-cafe",
+      "title": "Antisocial Java Cafe",
+      "description": "Explore a virtual café ordering system, complete with an interactive menu, real-time ordering, and user-friendly navigation.",
+      "image": "/assets/projects/online-cafe/cafe-preview.jpg",
+      "video": "/assets/projects/online-cafe/demo.mp4",
+      "gallery": [
+        "/assets/projects/online-cafe/cafe1.jpg",
+        "/assets/projects/online-cafe/cafe2.jpg",
+        "/assets/projects/online-cafe/cafe3.jpg"
+      ],
+      "files": [
+        { "name": "Demo.pdf", "url": "/assets/projects/online-cafe/demo.pdf" },
+        { "name": "Readme.md", "url": "/assets/projects/online-cafe/readme.md" }
+      ],
+      "technologies": ["React", "Node.js", "MongoDB"],
+      "features": ["Online ordering system", "Real-time inventory updates", "User authentication", "Admin management dashboard"],
+      "github": "https://github.com/your-repo"
+    }
+  ]
+  

@@ -1,0 +1,36 @@
+.item {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header h3 {
+    margin: 0;
+}
+
+.header span {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.content {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #1abc9c;
+    font-size: 1rem;
+}
+
+.item.open .content {
+    display: block;
+}
+
+.content p {
+    margin: 5px 0;
+}

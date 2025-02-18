@@ -1,0 +1,17 @@
+# General ignores
+.DS_Store
+.vscode/
+
+# Node dependencies
+node_modules/
+package-lock.json
+
+# Client files to ignore
+client/node_modules/
+client/.next/
+client/package-lock.json
+client/build/
+
+# Server files to ignore
+server/node_modules/
+server/package-lock.json
