@@ -1,0 +1,138 @@
+.idCard {
+    display: flex;
+    align-items: center;
+    background: rgba(22, 21, 44, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.3);
+    width: 80%;
+    max-width: 1000px;
+    border: 1px solid rgba(255, 217, 0, 0.7);
+    ;
+    ;
+    transition: transform 0.3s ease;
+}
+
+.idCard:hover {
+    transform: scale(1.02);
+}
+
+.profilePicContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePic {
+    width: 180px;
+    height: 180px;
+    border-radius: 7.5%;
+}
+
+.info {
+    flex: 3;
+    color: #fff;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Header - Name & Title */
+.header h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: rgba(255, 217, 0, 0.7);
+    ;
+}
+
+.title {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+/* Resume Button */
+.resumeButton {
+    height: 60%;
+    align-self: center;
+    background-color: rgba(255, 217, 0, 0.8);
+    color: #16152c;
+    padding: 8px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+    margin-right: 20px;
+}
+
+.resumeButton:hover {
+    background-color: rgba(255, 217, 0, 1);
+    transform: scale(1.05);
+}
+
+/* Two Column Layout */
+.infoGrid {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: 100%;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.column p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+/* Gold Line Divider */
+.divider {
+    width: 2px;
+    background-color: rgba(255, 217, 0, 0.7);;
+    height: auto;
+    /* Adjusts dynamically based on content */
+    min-height: 100%;
+    align-self: stretch;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .idCard {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        padding: 30px;
+    }
+
+    .profilePic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .info {
+        padding-left: 0;
+        padding-top: 20px;
+        text-align: left;
+    }
+
+    .infoGrid {
+        flex-direction: column;
+    }
+
+    .divider {
+        width: 80%;
+        height: 2px;
+        margin: 10px 0;
+    }
+}

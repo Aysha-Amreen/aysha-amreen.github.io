@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import styles from '../../styles/onlineCafe.module.css';
+import React, { useState, useRef, useEffect } from 'react';
+import styles from '../../styles/VideoPlayer.module.css';
 
 function VideoPlayer({ videoSrc, poster }) {
   const [videoPlaying, setVideoPlaying] = useState(false);
@@ -10,10 +10,33 @@ function VideoPlayer({ videoSrc, poster }) {
   const monitorRef = useRef(null);
 
   const speedIcons = {
-    1: '/x1-button.png',  // Replace with your x1 image
-    2: '/x2-button.png',  // Replace with your x2 image
-    4: '/x4-button.png',  // Replace with your x4 image
+    1: '/x1-button.png',  
+    2: '/x2-button.png',  
+    4: '/x4-button.png',  
   };
+
+  useEffect(() => {
+      // ✅ Listen for fullscreen change events
+      const handleFullscreenChange = () => {
+        const fullscreenElement = 
+          document.fullscreenElement || 
+          document.webkitFullscreenElement || 
+          document.msFullscreenElement;
+  
+        setIsFullscreen(!!fullscreenElement); // ✅ Update state based on fullscreen status
+      };
+  
+      document.addEventListener('fullscreenchange', handleFullscreenChange);
+      document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+      document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+  
+      return () => {
+        // ✅ Cleanup event listeners on component unmount
+        document.removeEventListener('fullscreenchange', handleFullscreenChange);
+        document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
+        document.removeEventListener('MSFullscreenChange', handleFullscreenChange);
+      };
+    }, []);
 
   const toggleVideoPlayback = () => {
     if (videoRef.current.paused) {
@@ -52,7 +75,6 @@ function VideoPlayer({ videoSrc, poster }) {
       } else if (document.msExitFullscreen) {
         document.msExitFullscreen(); // IE/Edge
       }
-      setIsFullscreen(false);
     }
   };
 
@@ -70,6 +92,7 @@ function VideoPlayer({ videoSrc, poster }) {
           onClick={toggleVideoPlayback}
           onPlay={() => setVideoPlaying(true)}
           onPause={() => setVideoPlaying(false)}
+          onError={(e) => console.error('Video failed to load:', e)}
         ></video>
 
         {!videoPlaying && (

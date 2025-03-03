@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import styles from '../../styles/onlineCafe.module.css';
+import styles from '../../styles/Gallery.module.css';
 
-function Gallery({ images }) {
+function Gallery({ images, onImageClick }) {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const handleNextImage = () => {
     setCurrentImage((currentImage + 1) % images.length);
@@ -12,10 +13,19 @@ function Gallery({ images }) {
     setCurrentImage((currentImage - 1 + images.length) % images.length);
   };
 
+  const openPopup = (index) => {
+    setCurrentImage(index);
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   // Calculate the correct offset to center the current image
   const getTranslateXValue = () => {
-    const imageWidth = 320; // Image width + margin
-    const containerWidth = 600; // Carousel width (set in CSS)
+    const imageWidth = 400; // Image width + margin
+    const containerWidth = 600; // Carousel width 
     const centerOffset = (containerWidth - imageWidth) / 2;
     return -(currentImage * imageWidth - centerOffset);
   };
@@ -45,11 +55,24 @@ function Gallery({ images }) {
               src={image}
               alt={`Gallery Image ${index + 1}`}
               className={`${styles.carouselImage} ${getClassForImage(index)}`}
+              onClick={() => openPopup(index)}
             />
           ))}
         </div>
         <button onClick={handleNextImage} className={styles.arrowRight}>&gt;</button>
       </div>
+
+      {/* Popup Modal */}
+      {isPopupOpen && (
+        <div className={styles.popupOverlay}>
+          <div className={styles.popupContent}>
+            <button onClick={closePopup} className={styles.closeButton}>×</button>
+            <button onClick={handlePreviousImage} className={styles.arrowLeft}>&lt;</button>
+            <img src={images[currentImage]} alt="Popup Gallery" className={styles.popupImage} />
+            <button onClick={handleNextImage} className={styles.arrowRight}>&gt;</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

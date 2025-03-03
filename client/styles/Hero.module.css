@@ -30,7 +30,7 @@
   width: auto;
   height: auto;
   transform: translate(-50%, -50%);
-  filter: brightness(0.75) blur(3px);
+  filter: brightness(0.5) blur(5px);
   transition: filter 0.5s ease;
   object-fit: cover;
 }
@@ -47,6 +47,13 @@
 .hero-content p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+}
+
+.idCardContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
 }
 
 .card-grid {

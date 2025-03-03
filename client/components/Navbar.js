@@ -12,18 +12,35 @@ function Navbar() {
 
   const handleNavigation = (route) => {
     router.push(route);
-    setIsOpen(false); // Close the menu after navigation
+    setIsOpen(false);
   };
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>Aysha Amreen Archives</div>
-      <div className={styles.hamburger} onClick={toggleMenu}>
-        <img
-          src="/hamburger.png"
-          alt="Menu Icon"
-          className={`${styles['hamburger-icon']} ${isOpen ? styles.open : ''}`}
-        />
+      {/* Logo Section */}
+      <div className={styles.logoContainer}>
+        <img src="/my-logo.png" alt="Logo" className={styles.logoImage} />
+        <span className={styles.logoText}>Aysha Amreen Archives</span>
+      </div>
+
+      <div className={styles.rightSection}>
+        {/* Always Visible Links */}
+        <span className={styles.bevelTab} onClick={() => handleNavigation('/')}>Home</span>
+        <div className={styles.separator}></div>
+        <span className={styles.bevelTab} onClick={() => handleNavigation('/about')}>About</span>
+        <div className={styles.separator}></div>
+        <span className={styles.bevelTab} onClick={() => handleNavigation('/projects')}>Projects</span>
+        <div className={styles.separator}></div>
+        <span className={styles.bevelTab} onClick={() => handleNavigation('/contact')}>Contact</span>
+
+        {/* Hamburger Menu */}
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          <img
+            src="/hamburger.png"
+            alt="Menu Icon"
+            className={`${styles['hamburger-icon']} ${isOpen ? styles.open : ''}`}
+          />
+        </div>
       </div>
       <ul className={`${styles['nav-links']} ${isOpen ? styles.show : ''}`}>
         <li onClick={() => handleNavigation('/')}>Home</li>

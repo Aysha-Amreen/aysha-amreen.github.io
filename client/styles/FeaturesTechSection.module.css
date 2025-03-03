@@ -1,0 +1,86 @@
+.featuresTechSection {
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    background: #001f3f;
+    border-radius: 15px;
+    padding: 10px 40px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    color: #fff;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-self: center;
+}
+
+.technology,
+.features {
+    flex: 1;
+}
+
+.features ul {
+    list-style: circle;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.features li {
+    padding-left: 10px; 
+}
+
+.subheading {
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+.verticalLine {
+    background: #fff;
+    width: 1px;
+    align-self: stretch;
+    margin: 25px 10px;
+}
+
+/* Tech Stack Badges */
+.techBadges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.badge {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #00ffcc;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+/* File Icons */
+.fileIcons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    padding: 4rem 0 2rem 0;
+}
+
+.fileLink {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.fileLink:hover {
+    transform: scale(1.1);
+}
+
+.fileIcon {
+    font-size: 3rem;
+}
+
+.fileLink p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin: 0px;
+}

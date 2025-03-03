@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/onlineCafe.module.css';
+import styles from '../../styles/ProjectTitle.module.css';
 
 function ProjectTitle({ title, description }) {
   return (

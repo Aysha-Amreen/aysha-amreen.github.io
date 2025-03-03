@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFilePdf, FaFileImage, FaFileAlt } from 'react-icons/fa';
-import styles from '../../styles/onlineCafe.module.css';
+import styles from '../../styles/FeaturesTechSection.module.css';
 
 const fileTypeIcons = {
   pdf: <FaFilePdf />,

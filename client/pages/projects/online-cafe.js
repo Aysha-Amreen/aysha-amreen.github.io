@@ -16,6 +16,11 @@ function OnlineCafeProject() {
     fetch(`${API_BASE_URL}/api/projects/online-cafe`)
       .then(response => response.json())
       .then(data => {
+        // Prefix API_BASE_URL to assets
+        data.image = `${API_BASE_URL}${data.image}`;
+        data.video = data.video ? `${API_BASE_URL}${data.video}` : null;
+        data.gallery = data.gallery.map(img => `${API_BASE_URL}${img}`)
+
         setProject(data);
         setLoading(false);
       })
@@ -36,7 +41,10 @@ function OnlineCafeProject() {
         <FeaturesTechSection
           technologies={project.technologies || []}
           features={project.features || []}
-          projectFiles={project.files?.map(file => ({ name: file.name, url: file.url })) || []}
+          projectFiles={project.files?.map(file => ({
+            name: file.name,
+            url: `${API_BASE_URL}${file.url}`
+          })) || []}
         />
 
         <ViewCodeButton repoUrl={project.github} />

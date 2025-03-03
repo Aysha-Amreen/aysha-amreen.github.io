@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import styles from '../styles/Hero.module.css'; 
-import Typewriter from './Typewriter.js';
+import styles from '../styles/Hero.module.css';
 import ProjectCard from './ProjectCard.js';
+import IDCard from './IDCard.js';
 
 // import Gear from './Gear.js';
 // import useParallaxEffect from './Parallax.js';
@@ -9,7 +9,7 @@ import ProjectCard from './ProjectCard.js';
 function Hero() {
   //useParallaxEffect(styles['parallax-bg']);
   const videoRef = useRef(null);
-  
+
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.65; // Set the playback rate to slow down the video
@@ -25,11 +25,9 @@ function Hero() {
         </video>
       </div>
 
-      <div className={styles['hero-content']}>
-        <h1>
-          <Typewriter words={['Software Engineer', 'Web Developer', 'Problem Solver']} />
-        </h1>
-        <p>Need a better tagline...</p>
+      {/* ID Card Component */}
+      <div className={styles.idCardContainer}>
+        <IDCard />
       </div>
 
       <div className={styles['card-grid']}>

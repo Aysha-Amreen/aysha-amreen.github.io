@@ -14,14 +14,14 @@ router.get('/projects', (req, res) => {
 
 // GET individual project by string ID
 router.get('/projects/:id', (req, res) => {
-    console.log(`Requested project ID: ${req.params.id}`); // ✅ Log incoming ID
+    console.log(`Requested project ID: ${req.params.id}`); 
 
     const project = projects.find(p => p.id === req.params.id);
     
     if (project) {
         res.json(project);
     } else {
-        console.log(`Project not found for ID: ${req.params.id}`); // ✅ Debugging output
+        console.log(`Project not found for ID: ${req.params.id}`); 
         res.status(404).json({ message: 'Project not found' });
     }
 });

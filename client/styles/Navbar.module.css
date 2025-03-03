@@ -2,19 +2,75 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
+  background-color: #16152c;
   color: #fff;
 }
 
-.logo {
+/* Logo Section */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoImage {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+  padding: 5px 10px 5px 20px;
+}
+
+.logoText {
   font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Right-Aligned Section */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.fixedLinks {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-self: right;
+  gap: 15px;
+}
+
+.separator {
+  width: 2px;
+  height: 20px;
+  background-color: rgba(255, 217, 0, 0.5);
+}
+
+.bevelTab {
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  cursor: url('/pointer-cursor.png'), pointer;
+}
+
+.bevelTab:hover {
+  background: linear-gradient(145deg, #1a1a2e, #222);
 }
 
 .hamburger {
   display: flex;
   align-items: center;
-  cursor: pointer;
+  padding: 15px 20px;
 }
 
 .hamburger-icon {
@@ -51,9 +107,7 @@
 
 .nav-links li {
   margin: 10px 0;
-  color: #fff;
-  cursor: pointer;
-  /* Ensure li is clickable */
+  color: #fff;  
 }
 
 .nav-links li:hover {

@@ -1,22 +1,77 @@
 [
-    {
-      "id": "online-cafe",
-      "title": "Antisocial Java Cafe",
-      "description": "Explore a virtual café ordering system, complete with an interactive menu, real-time ordering, and user-friendly navigation.",
-      "image": "/assets/projects/online-cafe/cafe-preview.jpg",
-      "video": "/assets/projects/online-cafe/demo.mp4",
-      "gallery": [
-        "/assets/projects/online-cafe/cafe1.jpg",
-        "/assets/projects/online-cafe/cafe2.jpg",
-        "/assets/projects/online-cafe/cafe3.jpg"
-      ],
-      "files": [
-        { "name": "Demo.pdf", "url": "/assets/projects/online-cafe/demo.pdf" },
-        { "name": "Readme.md", "url": "/assets/projects/online-cafe/readme.md" }
-      ],
-      "technologies": ["React", "Node.js", "MongoDB"],
-      "features": ["Online ordering system", "Real-time inventory updates", "User authentication", "Admin management dashboard"],
-      "github": "https://github.com/your-repo"
-    }
-  ]
-  
+  {
+    "id": "online-cafe",
+    "title": "Antisocial Java Cafe",
+    "card-image": "/assets/projects/online-cafe/card-image.png",
+    "card-description": "Spring Boot web application focused on database management and data manipulation using SQL",
+    "description": "A virtual café ordering system for those preferring minimal social interaction. This is a Spring Boot web application focused on database management and data manipulation using SQL. Read 'Readme.txt' for more information.",
+    "image": "/assets/projects/online-cafe/poster.png",
+    "video": "/assets/projects/online-cafe/temp-video.mp4",
+    "gallery": [
+      "/assets/projects/online-cafe/homepage.png",
+      "/assets/projects/online-cafe/item.png",
+      "/assets/projects/online-cafe/cart.png",
+      "/assets/projects/online-cafe/orders.png",
+      "/assets/projects/online-cafe/review.png",
+      "/assets/projects/online-cafe/search.png",
+      "/assets/projects/online-cafe/login.png",
+      "/assets/projects/online-cafe/menu.png",
+      "/assets/projects/online-cafe/register.png"
+    ],
+    "files": [
+      {
+        "name": "Readme.txt",
+        "url": "/assets/projects/online-cafe/Readme.txt"
+      },
+      {
+        "name": "ddl.sql",
+        "url": "/assets/projects/online-cafe/ddl.sql"
+      },
+      {
+        "name": "data.sql",
+        "url": "/assets/projects/online-cafe/data.sql"
+      },
+      {
+        "name": "security.txt",
+        "url": "/assets/projects/online-cafe/security.txt"
+      },
+      {
+        "name": "db_design.pdf",
+        "url": "/assets/projects/online-cafe/db_design.pdf"
+      },
+      {
+        "name": "queries.sql",
+        "url": "/assets/projects/online-cafe/queries.sql"
+      }
+    ],
+    "technologies": [
+      "Java",
+      "MySQL",
+      "CSS",
+      "JavaScript",
+      "Spring Boot",
+      "Spring Security",
+      "JDBC",
+      "Mustache",
+      "Apache Maven",
+      "JUnit",
+      "Docker",
+      "Apache Tomcat",
+      "REST API"
+    ],
+    "features": [
+      "Cart and Checkout Functionality",
+      "Search Menu Functionality",
+      "Highlight Top-Ordered Items",
+      "Order Management System",
+      "Review Item Functionality",
+      "User Authentication & Authorization",
+      "Secure Password Hashing",
+      "MySQL Database Integration",
+      "Unit Testing",
+      "Dockerized Database Support",
+      "Responsive UI"
+    ],
+    "github": "https://github.com/Aysha-Amreen/antisocial-java-cafe"
+  }
+]
